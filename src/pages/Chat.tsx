@@ -107,12 +107,16 @@ const Chat = () => {
                 key={activity.id}
                 activity={activity}
                 onClick={() => {
-                  const activityMessage: Message = {
-                    id: Date.now().toString(),
-                    content: `That's a great choice! ${activity.title} can really help. Take your time and enjoy the moment. 🌟`,
-                    isUser: false,
-                  };
-                  setMessages(prev => [...prev, activityMessage]);
+                  if (activity.type === 'breathing') {
+                    window.location.href = '/breathing?pattern=box';
+                  } else {
+                    const activityMessage: Message = {
+                      id: Date.now().toString(),
+                      content: `That's a great choice! ${activity.title} can really help. Take your time and enjoy the moment. 🌟`,
+                      isUser: false,
+                    };
+                    setMessages(prev => [...prev, activityMessage]);
+                  }
                 }}
               />
             ))}
