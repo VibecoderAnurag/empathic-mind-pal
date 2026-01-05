@@ -1,159 +1,129 @@
-# Welcome to your Lovable project
+# Empathic Mind Pal 🧠💙
 
-## Project info
+A comprehensive mental health support application that combines AI-driven emotional intelligence with practical wellness tools. Empathic Mind Pal helps users track their moods, receive real-time emotional support, and practice mindfulness through an adaptive, empathetic interface.
 
-**URL**: https://lovable.dev/projects/e5667e1f-8615-4f20-b97e-673cc30e77f8
+## 🌟 Key Features
 
-## How can I edit this code?
+### 🤖 AI-Powered Support
+- **Empathetic Chatbot**: Engage in meaningful conversations with an AI trained to understand and respond to your emotional state.
+- **Emotion Recognition**:
+  - **Text Analysis**: Uses DistilBERT (fine-tuned on GoEmotions) to detect nuances in your text.
+  - **Facial Expression**: Real-time facial emotion detection using computer vision to gauge your mood via camera.
 
-There are several ways of editing your application.
+### 🧘 Wellness Toolkit
+- **Breathing Exercises**: Guided interactive breathing sessions to reduce anxiety.
+- **Gratitude Journaling**: Dedicated space for gratitude reflection.
+- **Positive Memory Recall**: Tools to help anchor positive experiences.
+- **Wellness Routines**: Customizable routines to build healthy mental habits.
 
-**Use Lovable**
+### 🎨 Adaptive Experience
+- **Dynamic Themes**: The UI theme adapts to your current emotion (e.g., calming blues for anxiety, warm tones for happiness).
+- **Personalized Suggestions**: Smart recommendations for interventions based on your detected mood.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/e5667e1f-8615-4f20-b97e-673cc30e77f8) and start prompting.
+## 🛠️ Tech Stack
 
-Changes made via Lovable will be committed automatically to this repo.
+### Frontend
+- **Framework**: React (Vite)
+- **Language**: TypeScript
+- **Styling**: Tailwind CSS, shadcn-ui
+- **State/Routing**: TanStack Query, React Router
+- **Animations**: Framer Motion
 
-**Use your preferred IDE**
+### Machine Learning & Backend
+- **API**: FastAPI (Python)
+- **Deep Learning**: PyTorch, TensorFlow, TensorFlow.js
+- **NLP**: Hugging Face Transformers (DistilBERT), VADER Sentiment, TextBlob
+- **Computer Vision**: Custom CNN models for FER (Facial Emotion Recognition)
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## 🚀 Getting Started
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+### Prerequisites
+- **Node.js** (v18+ recommended)
+- **Python** (3.9+ recommended)
+- **Git**
 
-Follow these steps:
+### Installation
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+1. **Clone the repository**
+   ```bash
+   git clone https://github.com/VibecoderAnurag/empathic-mind-pal.git
+   cd empathic-mind-pal
+   ```
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+2. **Frontend Setup**
+   ```bash
+   npm install
+   ```
 
-# Step 3: Install the necessary dependencies.
-npm i
-
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
-
-**Edit a file directly in GitHub**
-
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with:
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-- **ML Backend**: DistilBERT (Hugging Face Transformers) fine-tuned on GoEmotions dataset
-- **API**: FastAPI for serving ML predictions
-
-## Machine Learning Model
-
-This project includes a DistilBERT-based emotion classification model fine-tuned on the GoEmotions dataset.
-
-### ML Setup
-
-1. **Navigate to ML directory:**
+3. **ML/Backend Setup**
+   Navigate to the `ml` directory and set up the Python environment.
    ```bash
    cd ml
+   # Windows
+   setup.bat
+   # Linux/Mac
+   bash setup.sh
    ```
-
-2. **Set up Python environment:**
-   - **Windows**: Run `setup.bat`
-   - **Linux/Mac**: Run `bash setup.sh`
-   - Or manually:
-     ```bash
-     python -m venv venv
-     source venv/bin/activate  # Linux/Mac
-     # or
-     venv\Scripts\activate  # Windows
-     pip install -r requirements.txt
-     ```
-
-3. **Train the model:**
+   *Alternatively, manually install dependencies:*
    ```bash
-   python train_model.py
-   ```
-   This will:
-   - Download and process the GoEmotions dataset
-   - Fine-tune DistilBERT for emotion classification
-   - Save the best model checkpoint with early stopping
-   - Evaluate on test set
-
-4. **Start the API server:**
-   ```bash
-   python api_server.py
-   ```
-   The API will be available at `http://localhost:8000`
-
-5. **Update frontend environment:**
-   Create a `.env` file in the root directory:
-   ```env
-   VITE_ML_API_URL=http://localhost:8000
-   ```
-
-See `ml/README.md` for detailed ML documentation.
-
-## Facial Emotion Detection
-
-The project now includes real-time facial emotion detection using TensorFlow.js!
-
-### Quick Setup
-
-1. **Install Python dependencies:**
-   ```bash
-   cd ml
    pip install -r requirements.txt
    ```
 
-2. **Download FER2013 dataset:**
-   - Visit: https://www.kaggle.com/datasets/msambare/fer2013
-   - Download `fer2013.csv` to `ml/` directory
+### Running the Application
 
-3. **Train the model:**
+You can start the entire application (Frontend + Backend) using the provided scripts in the root directory.
+
+**Windows:**
+```bash
+start_project.bat
+```
+
+**Manual Start:**
+
+1. **Start the Backend API:**
    ```bash
    cd ml
-   python train_facial_emotion.py
+   python api_server.py
    ```
+   *Server runs on http://localhost:8000*
 
-4. **Copy model to public directory:**
+2. **Start the Frontend:**
    ```bash
-   # Windows
-   xcopy /E /I ml\model\* public\ml\model\
-   
-   # Linux/Mac
-   cp -r ml/model/* public/ml/model/
+   # In a new terminal, from the root directory
+   npm run dev
    ```
+   *App runs on http://localhost:8080 (or similar)*
 
-5. **Test it:**
-   - Navigate to: `http://localhost:8080/facial-emotion`
-   - Click "Start Camera" and make expressions!
+## 📂 Project Structure
 
-See `SETUP_FACIAL_EMOTION.md` and `ml/FACIAL_EMOTION_README.md` for detailed instructions.
+```
+empathic-mind-pal/
+├── src/                # Frontend Source
+│   ├── components/     # UI Components (Chat, Cards, etc.)
+│   ├── pages/          # Application Routes (Dashboard, Chat, etc.)
+│   └── utils/          # Helper functions & API clients
+├── ml/                 # Machine Learning Backend
+│   ├── models/         # Saved model files
+│   ├── services/       # Business logic (Music, Affirmations, etc.)
+│   ├── api_server.py   # FastAPI entry point
+│   └── train_model.py  # Training scripts
+└── public/             # Static assets
+```
 
-## How can I deploy this project?
+## 🤝 Contributing
 
-Simply open [Lovable](https://lovable.dev/projects/e5667e1f-8615-4f20-b97e-673cc30e77f8) and click on Share -> Publish.
+Contributions are welcome! Please feel free to submit a Pull Request.
 
-## Can I connect a custom domain to my Lovable project?
+1. Fork the project
+2. Create your feature branch (`git checkout -b feature/AmazingFeature`)
+3. Commit your changes (`git commit -m 'Add some AmazingFeature'`)
+4. Push to the branch (`git push origin feature/AmazingFeature`)
+5. Open a Pull Request
 
-Yes, you can!
+## 📄 License
 
-To connect a domain, navigate to Project > Settings > Domains and click Connect Domain.
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
 
-Read more here: [Setting up a custom domain](https://docs.lovable.dev/features/custom-domain#custom-domain)
+---
+
+Built with 💙 by [Anurag](https://github.com/VibecoderAnurag)
