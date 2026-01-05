@@ -1,0 +1,6 @@
+# Place TensorFlow.js model files here after training
+# Files needed:
+# - model.json
+# - group1-shard*.bin
+
+

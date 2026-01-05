@@ -59,6 +59,92 @@ This project is built with:
 - React
 - shadcn-ui
 - Tailwind CSS
+- **ML Backend**: DistilBERT (Hugging Face Transformers) fine-tuned on GoEmotions dataset
+- **API**: FastAPI for serving ML predictions
+
+## Machine Learning Model
+
+This project includes a DistilBERT-based emotion classification model fine-tuned on the GoEmotions dataset.
+
+### ML Setup
+
+1. **Navigate to ML directory:**
+   ```bash
+   cd ml
+   ```
+
+2. **Set up Python environment:**
+   - **Windows**: Run `setup.bat`
+   - **Linux/Mac**: Run `bash setup.sh`
+   - Or manually:
+     ```bash
+     python -m venv venv
+     source venv/bin/activate  # Linux/Mac
+     # or
+     venv\Scripts\activate  # Windows
+     pip install -r requirements.txt
+     ```
+
+3. **Train the model:**
+   ```bash
+   python train_model.py
+   ```
+   This will:
+   - Download and process the GoEmotions dataset
+   - Fine-tune DistilBERT for emotion classification
+   - Save the best model checkpoint with early stopping
+   - Evaluate on test set
+
+4. **Start the API server:**
+   ```bash
+   python api_server.py
+   ```
+   The API will be available at `http://localhost:8000`
+
+5. **Update frontend environment:**
+   Create a `.env` file in the root directory:
+   ```env
+   VITE_ML_API_URL=http://localhost:8000
+   ```
+
+See `ml/README.md` for detailed ML documentation.
+
+## Facial Emotion Detection
+
+The project now includes real-time facial emotion detection using TensorFlow.js!
+
+### Quick Setup
+
+1. **Install Python dependencies:**
+   ```bash
+   cd ml
+   pip install -r requirements.txt
+   ```
+
+2. **Download FER2013 dataset:**
+   - Visit: https://www.kaggle.com/datasets/msambare/fer2013
+   - Download `fer2013.csv` to `ml/` directory
+
+3. **Train the model:**
+   ```bash
+   cd ml
+   python train_facial_emotion.py
+   ```
+
+4. **Copy model to public directory:**
+   ```bash
+   # Windows
+   xcopy /E /I ml\model\* public\ml\model\
+   
+   # Linux/Mac
+   cp -r ml/model/* public/ml/model/
+   ```
+
+5. **Test it:**
+   - Navigate to: `http://localhost:8080/facial-emotion`
+   - Click "Start Camera" and make expressions!
+
+See `SETUP_FACIAL_EMOTION.md` and `ml/FACIAL_EMOTION_README.md` for detailed instructions.
 
 ## How can I deploy this project?
 

@@ -12,7 +12,25 @@ const BreathingExercise = () => {
   const [searchParams] = useSearchParams();
   const navigate = useNavigate();
   const patternId = searchParams.get('pattern') || 'box';
-  const pattern = breathingPatterns.find(p => p.id === patternId) || breathingPatterns[0];
+  const mode = searchParams.get('mode'); // 'quick' for 10-second reset
+  const basePattern = breathingPatterns.find(p => p.id === patternId) || breathingPatterns[0];
+  
+  // Create quick mode pattern (10-second breathing reset)
+  const quickPattern = mode === 'quick' ? {
+    ...basePattern,
+    id: 'quick',
+    name: '10-Second Breathing Reset',
+    description: 'A quick breathing exercise to reset your nervous system',
+    phases: [
+      { type: 'inhale' as const, duration: 2, instruction: 'Breathe in slowly' },
+      { type: 'hold' as const, duration: 2, instruction: 'Hold gently' },
+      { type: 'exhale' as const, duration: 4, instruction: 'Exhale slowly' },
+      { type: 'rest' as const, duration: 2, instruction: 'Rest and pause' },
+    ],
+    totalDuration: 10,
+  } : null;
+  
+  const pattern = quickPattern || basePattern;
 
   const [isActive, setIsActive] = useState(false);
   const [currentPhaseIndex, setCurrentPhaseIndex] = useState(0);

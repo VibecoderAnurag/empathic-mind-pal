@@ -45,7 +45,7 @@ const Index = () => {
           initial={{ opacity: 0, y: 10 }}
           animate={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.6 }}
-          className="flex flex-col sm:flex-row gap-4 justify-center"
+          className="flex flex-col md:flex-row flex-wrap gap-4 justify-center"
         >
           <Button
             size="lg"
@@ -63,6 +63,22 @@ const Index = () => {
           >
             <TrendingUp className="w-5 h-5 mr-2" />
             View Dashboard
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            onClick={() => navigate('/facial-emotion')}
+            className="text-lg px-8 py-6 rounded-full shadow-soft hover:shadow-lg transition-all"
+          >
+            📷 Facial Emotion
+          </Button>
+          <Button
+            size="lg"
+            variant="outline"
+            onClick={() => navigate('/models')}
+            className="text-lg px-8 py-6 rounded-full shadow-soft hover:shadow-lg transition-all"
+          >
+            📚 Models Overview
           </Button>
         </motion.div>
 

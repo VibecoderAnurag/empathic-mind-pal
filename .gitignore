@@ -22,3 +22,22 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# ML Model files
+ml/checkpoints/
+ml/models/
+ml/FER2013/
+ml/data/
+*.pth
+*.pt
+*.bin
+*.onnx
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+
+# Environment variables
+.env
+.env.local

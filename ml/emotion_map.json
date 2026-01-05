@@ -1,0 +1,179 @@
+{
+  "happy": {
+    "supportive_message": "I'm so glad you're feeling happy! Your positive energy is wonderful. 🌟",
+    "suggested_actions": [
+      "Share your joy with someone you care about",
+      "Write down what's making you happy",
+      "Take a moment to appreciate this feeling",
+      "Do something creative to express your joy"
+    ],
+    "recommended_tools": ["gratitude_journal", "celebration_activity", "positive_memory_recall"],
+    "micro_intervention": "gratitude_reflection",
+    "music_suggestion": {
+      "category": "happy",
+      "description": "Upbeat and joyful music to enhance your positive mood",
+      "suggestions": [
+        "Happy by Pharrell Williams",
+        "Can't Stop the Feeling by Justin Timberlake",
+        "Walking on Sunshine by Katrina and the Waves"
+      ]
+    },
+    "personalized_routine": "morning_boost",
+    "affirmation": "I deserve to feel happy and celebrate my joy. My positive energy is a gift to myself and others."
+  },
+  "sad": {
+    "supportive_message": "I'm here with you. It's okay to feel sad sometimes. Your feelings are valid, and you don't have to face this alone. 💙",
+    "suggested_actions": [
+      "Take gentle care of yourself today",
+      "Reach out to a trusted friend or family member",
+      "Engage in a comforting activity you enjoy",
+      "Allow yourself to feel without judgment"
+    ],
+    "recommended_tools": ["breathing_exercise", "comforting_music", "gentle_movement", "self_compassion"],
+    "micro_intervention": "positive_memory_recall",
+    "music_suggestion": {
+      "category": "comfort",
+      "description": "Gentle, comforting music to provide solace and emotional support",
+      "suggestions": [
+        "Weightless by Marconi Union",
+        "River Flows in You by Yiruma",
+        "Someone Like You by Adele"
+      ]
+    },
+    "personalized_routine": "stress_relief",
+    "affirmation": "It's okay to feel sad. My emotions are valid, and this feeling will pass. I am strong and capable of healing."
+  },
+  "angry": {
+    "supportive_message": "I understand you're feeling angry. Your emotions are valid. Let's work through this together in a healthy way. 🌊",
+    "suggested_actions": [
+      "Take a few deep breaths to calm your nervous system",
+      "Step away from the situation if possible",
+      "Express your feelings in a safe way (journaling, talking)",
+      "Engage in physical activity to release tension"
+    ],
+    "recommended_tools": ["breathing_exercise", "grounding_54321", "shoulder_relaxation", "calming_countdown"],
+    "micro_intervention": "breathing_reset",
+    "music_suggestion": {
+      "category": "calm",
+      "description": "Calming instrumental music to help regulate emotions",
+      "suggestions": [
+        "Weightless by Marconi Union",
+        "Meditation Music by Various Artists",
+        "Peaceful Piano by Spotify"
+      ]
+    },
+    "personalized_routine": "stress_relief",
+    "affirmation": "I can feel my anger without letting it control me. I choose to respond thoughtfully and with compassion."
+  },
+  "anxious": {
+    "supportive_message": "I notice you might be feeling anxious. Let's take this one step at a time together. You're safe, and we'll get through this. 🌿",
+    "suggested_actions": [
+      "Try a grounding exercise (5-4-3-2-1 technique)",
+      "Practice deep breathing to activate your relaxation response",
+      "Focus on the present moment, one breath at a time",
+      "Remind yourself that anxiety is temporary"
+    ],
+    "recommended_tools": ["breathing_exercise", "grounding_54321", "calming_countdown", "progressive_relaxation"],
+    "micro_intervention": "grounding_54321",
+    "music_suggestion": {
+      "category": "calm",
+      "description": "Soothing ambient sounds to reduce anxiety and promote calm",
+      "suggestions": [
+        "Weightless by Marconi Union",
+        "Rain Sounds for Sleep",
+        "Calm Meditation Music"
+      ]
+    },
+    "personalized_routine": "anxiety_cool_down",
+    "affirmation": "I am safe in this moment. My anxiety is temporary, and I have the tools to manage it. I can handle this."
+  },
+  "fear": {
+    "supportive_message": "I understand you're feeling afraid. Fear is a natural response, but you're safe here. Let's work through this together. 💙",
+    "suggested_actions": [
+      "Practice grounding techniques to connect with the present",
+      "Take slow, deep breaths to calm your nervous system",
+      "Remind yourself of times you've overcome challenges",
+      "Focus on what you can control right now"
+    ],
+    "recommended_tools": ["breathing_exercise", "grounding_54321", "calming_countdown", "positive_memory_recall"],
+    "micro_intervention": "breathing_reset",
+    "music_suggestion": {
+      "category": "calm",
+      "description": "Peaceful music to help you feel safe and grounded",
+      "suggestions": [
+        "Weightless by Marconi Union",
+        "Nature Sounds: Forest",
+        "Calming Ocean Waves"
+      ]
+    },
+    "personalized_routine": "anxiety_cool_down",
+    "affirmation": "I am safe and capable. Fear is a signal, not a sentence. I can move through this with courage and support."
+  },
+  "stressed": {
+    "supportive_message": "I can sense you're feeling stressed. That's completely understandable. Let's find some ways to help you feel more grounded and calm. 🌊",
+    "suggested_actions": [
+      "Take a short break to reset your nervous system",
+      "Practice a quick breathing exercise",
+      "Do a brief body scan to release tension",
+      "Prioritize what truly needs your attention right now"
+    ],
+    "recommended_tools": ["breathing_exercise", "shoulder_relaxation", "calming_countdown", "quick_gratitude"],
+    "micro_intervention": "shoulder_relaxation",
+    "music_suggestion": {
+      "category": "ambient",
+      "description": "Ambient sounds to help you decompress and find calm",
+      "suggestions": [
+        "Weightless by Marconi Union",
+        "Focus Music: Concentration",
+        "Peaceful Background Music"
+      ]
+    },
+    "personalized_routine": "stress_relief",
+    "affirmation": "I can manage stress one moment at a time. I give myself permission to pause and take care of myself."
+  },
+  "low_energy": {
+    "supportive_message": "I notice you might be feeling low on energy. That's okay. Let's find gentle ways to support yourself. 💙",
+    "suggested_actions": [
+      "Take a short walk or gentle movement",
+      "Get some fresh air and natural light",
+      "Stay hydrated and have a light, nutritious snack",
+      "Listen to energizing but not overwhelming music"
+    ],
+    "recommended_tools": ["gentle_movement", "energizing_music", "gratitude_reflection", "positive_memory_recall"],
+    "micro_intervention": "gratitude_reflection",
+    "music_suggestion": {
+      "category": "happy",
+      "description": "Gentle, uplifting music to boost your energy naturally",
+      "suggestions": [
+        "Upbeat Instrumental",
+        "Morning Energy Playlist",
+        "Motivational Music"
+      ]
+    },
+    "personalized_routine": "morning_boost",
+    "affirmation": "My energy levels fluctuate, and that's normal. I can take small, gentle steps to support myself."
+  },
+  "neutral": {
+    "supportive_message": "Thanks for sharing with me. I'm here to support you however you need. How are you feeling today?",
+    "suggested_actions": [
+      "Check in with yourself about what you need right now",
+      "Engage in a mindful activity",
+      "Take a moment for self-reflection",
+      "Do something that brings you a sense of peace"
+    ],
+    "recommended_tools": ["mindful_breathing", "gentle_activity", "general_wellness", "reflection"],
+    "micro_intervention": "gratitude_reflection",
+    "music_suggestion": {
+      "category": "ambient",
+      "description": "Peaceful ambient music for reflection and calm",
+      "suggestions": [
+        "Ambient Study Music",
+        "Peaceful Background Sounds",
+        "Calm Instrumental"
+      ]
+    },
+    "personalized_routine": "general_wellness",
+    "affirmation": "I am present in this moment. I honor where I am and trust my journey."
+  }
+}
+
