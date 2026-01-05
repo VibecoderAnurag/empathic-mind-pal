@@ -69,6 +69,8 @@ A comprehensive mental health support application that combines AI-driven emotio
    pip install -r requirements.txt
    ```
 
+   See `docs/ML_GUIDE.md` for detailed ML documentation.
+
 ### Running the Application
 
 You can start the entire application (Frontend + Backend) using the provided scripts in the root directory.

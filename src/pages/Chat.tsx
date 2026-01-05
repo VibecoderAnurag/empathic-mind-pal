@@ -19,8 +19,7 @@ import {
 } from '@/components/ui/alert-dialog';
 import { analyzeSentiment, getEmotionEmoji } from '@/utils/sentimentAnalysis';
 import { analyzeEmotionWithML } from '@/utils/mlEmotionApi';
-import { getEmpatheticResponse, getSuggestedActivities } from '@/utils/responseEngine';
-import { getEmpatheticResponse28 } from '@/utils/responseEngine28';
+import { getEmpatheticResponse, getSuggestedActivities, getEmpatheticResponse28 } from '@/utils/responseEngine';
 import { saveMoodEntry, getMoodEntries } from '@/utils/moodStorage';
 import { getEmotionEmoji as getGoEmotionEmoji, getEmotionColor, mapGoEmotionToAppEmotion } from '@/utils/emotions';
 import { getEmotionResponse, EmotionResponseData } from '@/utils/emotionResponseApi';
